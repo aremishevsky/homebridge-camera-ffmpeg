@@ -380,6 +380,9 @@ FFMPEG.prototype.createCameraControlService = function() {
   this.services.push(controlService);
 
   if(this.audio){
+    var speakerService = new Service.Speaker();
+    this.services.push(speakerService);
+    
     var microphoneService = new Service.Microphone();
     this.services.push(microphoneService);
   }
